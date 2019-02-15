@@ -6,6 +6,8 @@ import com.ssm.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -16,5 +18,13 @@ public class UserServiceImpl implements UserService {
             return person;
         }
         return null;
+    }
+
+    public int register(Person person) {
+        return userMapperDao.register(person);
+    }
+
+    public ArrayList<Person> selectSelective(Person person) {
+        return userMapperDao.selectSelective(person);
     }
 }

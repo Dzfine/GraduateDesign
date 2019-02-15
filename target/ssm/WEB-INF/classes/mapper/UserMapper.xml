@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.demo.dao.UserMapperDao">
+    <!-- 目的：为DAO接口方法提供sql语句配置 -->
+    <!-- 查询用户和密码进行登录 -->
     <select id="findUserByName" parameterType="String" resultType="Person">
         SELECT * FROM person WHERE name = #{name}
     </select>
+    <!--增加邮箱账号、用户名和密码进行注册  -->
+    <insert id="register">
+        insert into person (email,name,password) values (#{email}, #{name}, #{password})
+    </insert>
 </mapper>

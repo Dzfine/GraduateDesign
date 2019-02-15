@@ -5,11 +5,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jiang's blog</title>
-    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/uploading.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/reset.css">
-    <script type="text/javascript" src="${pageContext.request.contextPath }/js/bootstrap.min.js"></script>--%>
+    <title>登录</title>
+    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/uploading.css">--%>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/WEB-INF/js/bootstrap.min.js"></script>
 </head>
 <body class="upload_page">
 <div class="login">
@@ -36,11 +34,6 @@
 </div>
 </body>
 <script type="text/javascript">
-    $(function () {
-        var val = document.getElementsByClassName("form-control");
-        if(val == null) {
-            alert("用户名和密码不能为空");
-        }
-    })
+
 </script>
 </html>
