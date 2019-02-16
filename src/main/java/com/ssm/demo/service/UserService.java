@@ -7,7 +7,5 @@ import java.util.ArrayList;
 public interface UserService {
     Person findUserByName(String name, String password);
 
-    int register(Person person);
-
-    ArrayList<Person> selectSelective(Person person);
+    void register(Person person);
 }

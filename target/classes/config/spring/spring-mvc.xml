@@ -19,6 +19,14 @@
     <!-- 静态资源默认servlet配置 -->
     <mvc:default-servlet-handler/>
 
+    <!-- Session失效拦截
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="Login.jsp"/>
+            <bean class="com.cm.contract.controller.annotation"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>-->
     <!-- 配置jsp 显示ViewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>

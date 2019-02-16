@@ -8,7 +8,7 @@
         SELECT * FROM person WHERE name = #{name}
     </select>
     <!--增加邮箱账号、用户名和密码进行注册  -->
-    <insert id="register">
-        insert into person (email,name,password) values (#{email}, #{name}, #{password})
+    <insert id="addUser">
+        insert into person (email,name,password,status) values (#{email}, #{name}, #{password}, 0)
     </insert>
 </mapper>

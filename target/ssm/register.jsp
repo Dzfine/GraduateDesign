@@ -6,6 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
+    <script>
+        function validate() {
+            var pwdRegx = /^.*(?=.{6,18})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+            var password = document.getElementById("pwd_validate").innerHTML;
+            if (!password.matches(pwdRegx)) {
+                document.getElementById("pwd_validate").innerHTML = "密码必须包含一个大写字母、一个小写字母、一个数字、一个特殊字符，长度为6-18位！";
+            }
+        };
+    </script>
 </head>
 <body>
 <div class="container">
@@ -16,14 +25,15 @@
                     <h3 class="panel-title">注册邮箱账号</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="fm-form" method="post" autocomplete="off" action="/user/register">
+                    <form class="fm-form" method="post" autocomplete="off" action="${pageContext.request.contextPath }/user/register">
                         <input type='hidden' name='csrfmiddlewaretoken' value='rklpUz2gXL5mTgF6spUb8YwPcNmu5A4D' />
                         <div id="div_id_email" class="form-group">
                             <label for="id_email" class="control-label  requiredField">注册邮箱
                                 <span class="asteriskField">*</span>
                             </label>
                             <div class="controls ">
-                                <input class="emailinput form-control" id="id_email" name="email" type="email" />
+                                <input class="emailinput form-control" id="id_email" name="email" type="email" required="true" />
+                                <span id="email-validate" class="register-validate"></span>
                             </div>
                         </div>
                         <div id="div_id_nickname" class="form-group">
@@ -31,7 +41,8 @@
                                 <span class="asteriskField">*</span>
                             </label>
                             <div class="controls ">
-                                <input class="textinput textInput form-control" id="id_nickname" maxlength="30" name="name" type="text" />
+                                <input class="textinput textInput form-control" id="id_nickname" maxlength="30" name="name" type="text" required="true" />
+                                <span id="name-validate" class="register-validate"></span>
                             </div>
                         </div>
                         <div id="div_id_password" class="form-group">
@@ -39,7 +50,8 @@
                                 <span class="asteriskField">*</span>
                             </label>
                             <div class="controls ">
-                                <input class="textinput textInput form-control" id="id_password" maxlength="30" name="password" type="password" />
+                                <input class="textinput textInput form-control" id="id_password" maxlength="30" name="password" type="password" required="true" />
+                                <span id="pwd-validate" class="register-validate"></span>
                             </div>
                         </div>
                         <%--<div id="div_id_captcha" class="form-group">
@@ -87,8 +99,9 @@
     <span class="glyphicon glyphicon-arrow-up"></span>
     <br> 顶部
 </a>
-</body>
 <script type="text/javascript">
-
+    validate();
 </script>
+</body>
+
 </html>

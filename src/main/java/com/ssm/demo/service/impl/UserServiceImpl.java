@@ -20,11 +20,7 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    public int register(Person person) {
-        return userMapperDao.register(person);
-    }
-
-    public ArrayList<Person> selectSelective(Person person) {
-        return userMapperDao.selectSelective(person);
+    public void register(Person person) {
+        userMapperDao.addUser(person);
     }
 }

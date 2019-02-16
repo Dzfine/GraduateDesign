@@ -14,10 +14,7 @@ public interface UserMapperDao {
      * @return
      */
     Person findUserByName(String name);
-    /**
-     * 注册用户(邮箱、用户名、密码)
-     */
-    int register(Person person);
 
-    ArrayList<Person> selectSelective(Person person);
+    //添加用户，即注册功能
+    public void addUser(Person person);
 }
