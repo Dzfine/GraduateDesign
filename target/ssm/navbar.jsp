@@ -5,8 +5,9 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/WEB-INF/css/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./WEB-INF/css/v2.css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./css/v2.css" charset="utf-8">
     <title></title>
 </head>
 <body>
@@ -40,18 +41,18 @@
                     <form class="navbar-form navbar-left fm-search" role="search" action="/search/" method="get">
                         <div class="input-group">
                             <input type="text" class="form-control input-sm" name="text" placeholder="电影、艺人、导演">
-                            <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
-                                </span>
+                            <span class="input-group-btn" >
+                                    <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search" style="background: url(./image/select-icon.png)"></span></button>
+                            </span>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script src="WEB-INF/js/bootstrap.js" type="text/javascript"></script>
-    <script src="WEB-INF/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="WEB-INF/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
 
     </script>
