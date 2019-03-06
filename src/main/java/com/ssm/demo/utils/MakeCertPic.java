@@ -16,20 +16,20 @@ import javax.servlet.http.HttpSession;
 public class MakeCertPic {
     public static final String RANDOM_CODEKEY = "random_codekey";  //放入session中的key
     public String randString = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";  //随机产生数字与字母混合的验证码字符串
-    private int width = 95;   //验证码图片的宽度
-    private int height = 25;  //验证码图片的高度
+    private int width = 70;   //验证码图片的宽度
+    private int height = 28;  //验证码图片的高度
     private int lingSize = 20;  //干扰线的数量
     private int stringNum = 4;  //验证码图片中字符的个数
     private Random random = new Random();
 
     //获取验证码的字体
     private Font getFont() {
-        return new Font("Fixedsys", Font.CENTER_BASELINE, 18);
+        return new Font("Fixedsys", Font.CENTER_BASELINE, 22);
     }
 
     //获取验证码背景的颜色
-    private Color getRandColor(int fc, int bc) {
-        if(fc > 255) {
+    private Color getRandColor() {
+        /*if(fc > 255) {
             fc = 255;
         }
         if(bc > 255) {
@@ -37,8 +37,8 @@ public class MakeCertPic {
         }
         int r = fc + random.nextInt(bc - fc -16);
         int g = fc + random.nextInt(bc - fc -14);
-        int b = fc + random.nextInt(bc - fc -18);
-        return new Color(r, g, b);
+        int b = fc + random.nextInt(bc - fc -18);*/
+        return new Color(150, 130, 80);
     }
 
     //生成随机的图片
@@ -48,7 +48,7 @@ public class MakeCertPic {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_BGR);
         Graphics g = image.getGraphics();
         g.setFont(new Font("Times New Roman", Font.ROMAN_BASELINE, 18));
-        g.setColor(getRandColor(110,133));
+        g.setColor(getRandColor());
         for(int i = 0;i<= lingSize; i++) {
             drowLine(g);
         }
@@ -69,7 +69,7 @@ public class MakeCertPic {
     //得到字符串
     private String drowString(Graphics g, String randomString, int i) {
         g.setFont(getFont());
-        g.setColor(new Color(random.nextInt(101), random.nextInt(111), random.nextInt(121)));
+        g.setColor(new Color(135,156,220));
         String rand = String.valueOf(getRandomString(random.nextInt(randString.length())));
         randomString += rand;
         g.translate(random.nextInt(3), random.nextInt(3));

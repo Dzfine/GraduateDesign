@@ -54,25 +54,6 @@
                                 <span id="pwd-validate" class="register-validate"></span>
                             </div>
                         </div>
-                        <%--<div id="div_id_captcha" class="form-group">
-                            <label for="id_captcha_1" class="control-label  requiredField">算术验证码
-                                <span class="asteriskField">*</span>
-                            </label>
-                            <div class="controls ">
-                                <img src="/captcha/image/360820266f9da3c2a86716c454cabbd224d92a8a/" alt="captcha" class="captcha" />
-                                <input class="hiddeninput form-control" id="id_captcha_0" name="captcha_0" type="hidden" value="360820266f9da3c2a86716c454cabbd224d92a8a" />
-                                <input autocomplete="off" class="textinput textInput form-control" id="id_captcha_1" name="captcha_1" type="text" />
-                                <p id="hint_id_captcha" class="help-block">请输入计算结果。</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div id="div_id_tos" class="checkbox">
-                                <label for="id_tos" class=" requiredField">
-                                    <input checked="checked" class="checkboxinput checkbox" id="id_tos" name="tos" type="checkbox" />已阅读并同意
-                                    <a target="_blank" href="/account/terms">用户协议</a>。
-                                </label>
-                            </div>
-                        </div>--%>
                         <p><button class="btn btn-block btn-primary">注 册</button></p>
                         <p><a href="Login.jsp" class="btn btn-block btn-default">登录已有账号</a></p>
                     </form>

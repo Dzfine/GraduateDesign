@@ -47,7 +47,7 @@ public class UserController {
         HttpSession session = request.getSession();
         session.getId();
         String random = (String) session.getAttribute("random_codekey");
-        String realCode = request.getParameter("captcha");
+        String realCode = request.getParameter("captcha").toUpperCase();
 
         if(person != null && realCode == random) {
             session.setAttribute("user", person.getName());
